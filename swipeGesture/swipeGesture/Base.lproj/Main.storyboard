@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n0I-2Z-xML">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="swipeGesture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-196" y="52"/>
+        </scene>
+        <!--Swipe Via StoryboardVC-->
+        <scene sceneID="H5x-Au-Dlc">
+            <objects>
+                <viewController id="n0I-2Z-xML" customClass="SwipeViaStoryboardVC" customModule="swipeGesture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SC5-6X-jq5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fdu-3u-1KF">
+                                <rect key="frame" x="20" y="200.66666666666663" width="374" height="335"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xm-dn-21u">
+                                        <rect key="frame" x="20" y="20" width="334" height="295"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="335" id="0Nk-ts-qyG"/>
+                                    <constraint firstAttribute="bottom" secondItem="8Xm-dn-21u" secondAttribute="bottom" constant="20" id="0ms-ga-Oqx"/>
+                                    <constraint firstAttribute="trailing" secondItem="8Xm-dn-21u" secondAttribute="trailing" constant="20" id="4Hu-m0-xwo"/>
+                                    <constraint firstAttribute="width" constant="374" id="DLy-sB-IaE"/>
+                                    <constraint firstItem="8Xm-dn-21u" firstAttribute="top" secondItem="Fdu-3u-1KF" secondAttribute="top" constant="20" id="HX6-Qg-dTO"/>
+                                    <constraint firstItem="8Xm-dn-21u" firstAttribute="leading" secondItem="Fdu-3u-1KF" secondAttribute="leading" constant="20" id="uGm-2c-b7y"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="pea-1S-sVd" appends="YES" id="f6Y-Lq-EOW"/>
+                                    <outletCollection property="gestureRecognizers" destination="w0x-U1-YpZ" appends="YES" id="8dO-MU-dgy"/>
+                                    <outletCollection property="gestureRecognizers" destination="DDg-5e-77v" appends="YES" id="5tu-99-q8j"/>
+                                    <outletCollection property="gestureRecognizers" destination="ydf-We-b8F" appends="YES" id="U2J-Us-lj5"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TaT-te-9v5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Fdu-3u-1KF" firstAttribute="centerY" secondItem="SC5-6X-jq5" secondAttribute="centerY" id="IKE-F2-nXc"/>
+                            <constraint firstItem="Fdu-3u-1KF" firstAttribute="centerX" secondItem="SC5-6X-jq5" secondAttribute="centerX" id="ec8-t5-MQl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="centerView" destination="Fdu-3u-1KF" id="FUL-x5-5oB"/>
+                        <outlet property="directionLabel" destination="8Xm-dn-21u" id="sPG-We-jrN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V4C-RU-Emh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="pea-1S-sVd">
+                    <connections>
+                        <action selector="swipeGesture:" destination="n0I-2Z-xML" id="ZnI-TE-tzf"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="w0x-U1-YpZ">
+                    <connections>
+                        <action selector="swipeGesture:" destination="n0I-2Z-xML" id="w4u-YO-Uhj"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="DDg-5e-77v">
+                    <connections>
+                        <action selector="swipeGesture:" destination="n0I-2Z-xML" id="LbC-s2-Ilb"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="ydf-We-b8F">
+                    <connections>
+                        <action selector="swipeGesture:" destination="n0I-2Z-xML" id="xAC-et-ObA"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="531.8840579710145" y="57.880434782608702"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
